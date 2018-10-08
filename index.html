@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>UD44 - Souscription</title>
+	<link rel="stylesheet" href="content/styles/main.min.css">
+</head>
+<body>
+	<!-- Le contenu -->
+	<div class="body">
+
+	</div>
+	<div class="app-bar"hidden>
+		<span class="app-bar__title">UD44 - Souscription</span>
+		<i style="color:lightgrey;font-size:12px;">v0.3.1</i>
+		<button class="app-bar__action close" disabled hidden>
+			<i class="material-icons">close</i>
+		</button>
+		<button class="app-bar__action" disabled hidden>
+			<i class="material-icons">fullscreen</i>
+		</button>
+		<button class="app-bar__action" disabled hidden>
+			<i class="material-icons">remove</i>
+		</button>
+	</div>
+	<div class="header">
+		<span class="title">Souscription</span>
+		<span class="subtitle" >accueil</span>
+		<div class="breadcrumb">
+			<button class="breadcrumb__element" app-nav="prev" app-data="accueil" disabled>
+				<i class="material-icons">home</i>
+			</button>
+		</div>
+	</div>
+	<div class="footer">
+		<!--<i style="float:left;color:lightgrey;font-size:12px;">
+
+			( Node: <script>document.write(process.versions.node)</script>
+			- Chrome: <script>document.write(process.versions.chrome)</script>
+			- Electron: <script>document.write(process.versions.electron)</script> )
+		</i>-->
+		<div class="help-info">
+			<span><b>association : </b><a href="http://sang44.free.fr" title="http://sang44.free.fr">UDDSB 44</a></span>
+			<span><b>auteur : </b><a href="mailto:anthonydeniaud@gmail.com" title="anthonydeniaud@gmail.com">Anthony DENIAUD</a></span>
+			<span><b>code : </b><a href="https://github.com/andemx" title="https://github.com/andemx">andemx</a></span>
+			<span><b>version : </b>0.3.3</span>
+		</div>
+		<button class="button phantom action help small" app-action="help">
+			<i class="material-icons">info</i>
+		</button>
+		<!--
+		<span>-</span>
+		<span><b>site : </b><a href="https://ande.mx" title="https://ande.mx";>andemx</a></span>
+	-->
+</div>
+<!-- La fin du contenu -->
+
+<!-- [SCRIPTS-VENDORS] -->
+<!-- Insert this line above script imports  -->
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+<!-- normal script imports etc  -->
+<script src="scripts/vendors/jquery-3.2.1.min.js"></script>
+<script src="scripts/vendors/dateformat-1.2.3.min.js"></script>
+<!-- Insert this line after script imports -->
+<script>if (window.module) module = window.module;</script>
+
+<!-- [SCRIPTS-OWN] -->
+<script>
+// You can also require other files to run in this process
+require('./renderer.js')
+require('./scripts/app.js');
+</script>
+
+<!-- [TEMPLATES] -->
+<div id="templates" hidden></div>
+<div id="events" hidden></div>
+</body>
+</html>

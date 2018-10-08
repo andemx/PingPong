@@ -1,0 +1,26 @@
+// main: ../main.scss
+
+.body{
+  position:relative;
+  height:100%;
+  width:100%;
+  padding:0 16%;
+  overflow-x:hidden;
+  overflow-y:scroll;
+
+  .wsp{
+    height:100%;
+    position:relative;
+    padding:$size-base*2+px;
+    white-space:initial;
+    font-size:0;
+    &-title{
+      padding:0 $size-base*2+px;
+    }
+    &-tirage{
+      table{
+        width:auto;
+      }
+    }
+  }
+}

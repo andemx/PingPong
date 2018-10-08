@@ -1,0 +1,198 @@
+<div class="wsp wsp-tirage" app-load="tirage">
+
+  <div class="x-100 y-100" app-state="-1" hidden>
+    <button class="raised center-50-50 colored big" app-action="stateNext" >démarrer le tirage</button>
+  </div>
+
+  <div class="y-100" app-state="0" hidden>
+    <div class="card" >
+      <h3 class=""><i class="material-icons">casino</i> Tirage Souscription 2018</h3>
+      <table class="" align="center">
+        <col width="40">
+        <col width="85">
+        <col width="50">
+        <col width="250px">
+        <col width="16">
+        <col width="75">
+        <col width="75">
+        <col width="75">
+        <col width="75">
+        <col width="75">
+        <tbody class="table-header">
+          <tr>
+            <th>&nbsp;</th>
+            <th>Numéro lot</th>
+            <th>Nombre</th>
+            <th>Désignation</th>
+            <th>&nbsp;</th>
+            <th colspan="5">Numeros gagnant</th>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table-jackpot" align="center">
+        <col width="40">
+        <col width="85">
+        <col width="50">
+        <col width="250px">
+        <col width="16">
+        <col width="75">
+        <col width="75">
+        <col width="75">
+        <col width="75">
+        <col width="75">
+        <tbody class="table-content">
+        </tbody>
+      </table>
+      <table class="table-groslot" align="center">
+        <col width="40">
+        <col width="85">
+        <col width="50">
+        <col width="250px">
+        <col width="16">
+        <col width="75">
+        <col width="75">
+        <col width="75">
+        <col width="75">
+        <col width="75">
+        <tbody class="table-content">
+        </tbody>
+      </table>
+      <table class="table-petitlot" align="center">
+        <col width="40">
+        <col width="85">
+        <col width="50">
+        <col width="250px">
+        <col width="16">
+        <col width="75">
+        <col width="75">
+        <col width="75">
+        <col width="75">
+        <col width="75">
+        <tbody class="table-content">
+        </tbody>
+      </table>
+      <button class="raised primary center-100-100 float-right" app-action="stateNext" disabled title="tout les numeros doivent être remplis et validé (avoir une barre verte)" style="margin:8px;">Voir la distribution des lots <i class="material-icons">chevron_right</i> </button>
+      <p style="padding:0 16px">
+      <span class="float-right totalNumero">x</span>
+      <span class="float-right"> / </span>
+      <span class="float-right totalValid">x</span>
+      <span class="float-right">numero valide : </span>
+    </p>
+    </div>
+  </div>
+
+  <div class="y-100" app-state="1" hidden>
+    <div class="card text-center">
+      <h3><i class="material-icons">casino</i> Distribution des lots</h3>
+      <br/>
+      <br/>
+      <span>Selectionner une association dans la liste pour voir les lots qui lui sont attribués: </span>
+      <br/>
+      <br/>
+      <select class="x-50" id="resumeAsso">
+        <option>Liste des associations</option>
+      </select>
+      <br/>
+      <br/>
+
+      <div class="lotWin"></div>
+      <br/>
+      <button class="raised default float-left" app-action="statePrev" style="margin:8px;"><i class="material-icons">chevron_left</i>Verification tirage</button>
+      <button class="raised default float-right" app-action="print" title="Imprimer la page en cour" style="margin:8px;"><i class="material-icons">print</i> </button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- ############### TEMPLATE ############### -->
+
+<script id="lignetiragejackpot" type="text/html">
+  <tr lot-id=""  lot-type="" class="lignetiragejackpot">
+    <td class="icone">
+      <i class="material-icons" style="padding:3px">airplanemode_active</i>
+    </td>
+    <td class="numero">
+      <span app-display="numero"></span>
+    </td>
+    <td class="nombre">
+      <span app-display="nombre"></span>
+    </td>
+    <td class="nom">
+      <span app-display="nom"></span>
+    </td>
+    <td class="table-gap"></td>
+    <td class="tirage1">
+      <input type="number" lot-id=""  lot-type="jackpot" tirage="1" maxlength="5" valid="">
+    </td>
+    <td class="association" colspan=4>
+      <span app-display="association"></span>
+    </td>
+  </tr>
+</script>
+
+<script id="lignetiragegroslot" type="text/html">
+  <tr lot-id=""  lot-type="" class="lignetiragegroslot">
+    <td class="icone">
+      <i class="material-icons" style="padding:3px">speaker</i>
+    </td>
+    <td class="numero">
+      <span app-display="numero"></span>
+    </td>
+    <td class="nombre">
+      <span app-display="nombre"></span>
+    </td>
+    <td class="nom">
+      <span app-display="nom"></span>
+    </td>
+    <td class="table-gap"></td>
+    <td class="tirage1">
+      <input type="number" lot-id="" lot-type="groslot" tirage="1" maxlength="5" valid="">
+    </td>
+    <td class="tirage2">
+      <input type="number" lot-id="" lot-type="groslot" tirage="2" maxlength="5" valid="">
+    </td>
+    <td class="tirage3">
+      <input type="number" lot-id="" lot-type="groslot" tirage="3" maxlength="5" valid="">
+    </td>
+    <td class="tirage4">
+      <input type="number" lot-id=""  lot-type="groslot" tirage="4" maxlength="5" valid="">
+    </td>
+    <td class="tirage5">
+      <input type="number" lot-id=""  lot-type="groslot" tirage="5" maxlength="5" valid="">
+    </td>
+  </tr>
+</script>
+
+<script id="lignetiragepetitlot" type="text/html">
+  <tr lot-id=""  class="lignetiragepetitlot">
+    <td class="icone">
+      <i class="material-icons" style="padding:3px">free_breakfast</i>
+    </td>
+    <td class="numero">
+      <span app-display="numero"></span>
+    </td>
+    <td class="nombre">
+      <span app-display="nombre"></span>
+    </td>
+    <td class="nom">
+      <span app-display="nom"></span>
+    </td>
+    <td class="table-gap"></td>
+    <td class="tirage1">
+      <input type="number" lot-id=""  lot-type="petitlot" tirage="1" lot="petitlot" maxlength="3" valid="">
+    </td>
+    <td class="tirage2">
+      <input type="number" lot-id=""  lot-type="petitlot" tirage="2" lot="petitlot" maxlength="3" valid="">
+    </td>
+    <td class="tirage3">
+      <input type="number" lot-id=""  lot-type="petitlot" tirage="3" lot="petitlot" maxlength="3" valid="">
+    </td>
+    <td class="tirage4">
+      <input type="number" lot-id=""  lot-type="petitlot" tirage="4" lot="petitlot" maxlength="3" valid="">
+    </td>
+    <td class="tirage5">
+      <input type="number" lot-id=""  lot-type="petitlot" tirage="5" lot="petitlot" maxlength="3" valid="">
+    </td>
+  </tr>
+</script>

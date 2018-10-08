@@ -1,0 +1,145 @@
+// main: ../main.scss
+
+.app-bar{
+  cursor:default;
+  position:absolute;
+  top:0;
+  width:100%;
+  height:$size-app-bar+px;
+  background-color:$color-app-bar;
+  color:white;
+  &__title{
+    padding:0 $size-base*2+px;
+    font-size:13px;
+    line-height:$size-app-bar+px;
+  }
+  &__action{
+    transition-duration: 150ms;
+    margin:0 1px;
+    border-radius:0;
+    background-color:transparent;
+    //opacity:0.25;
+    color:darken(white,15%);
+    float:right;
+    padding:0 $size-base+2+px;
+    &:hover{
+      background-color:$color-primary;
+      color:white;
+    }
+    &.close:hover{
+      background-color:darken($color-danger,15%);
+    }
+    &[disabled]{
+      cursor:default;
+      &:hover{
+        color:$color-divider;
+        background-color:transparent;
+      }
+        color:$color-divider;
+        background-color:transparent;
+    }
+  }
+}
+.header{
+  position:absolute;
+  top:0;//$size-app-bar+px;
+  width:100%;
+  height:$size-header-total+px;
+  background-color:$color-header;
+  color:white;
+  padding:0 16%;
+  box-shadow: 0 2px 5px rgba(0,0,0,.26);
+  //text-shadow:0 0 5px $color-primary-dark,0 0 1px black;
+
+  .app-bar{
+    height:$size-app-bar+px;
+    background-color: $color-primary-dark;
+  }
+
+  .title,.subtitle{
+    cursor:default;
+    @extend .fontRT;
+    display:inline-block;
+    font-weight:bold;
+    padding:$size-base*2+px $size-base*4+px;
+    font-size:$size-subtitle+px;
+  }
+  .subtitle{
+    font-weight:100;
+    padding:$size-base*2+px 0;
+    font-size:$size-subtitle/1.5+px;
+    text-transform: capitalize;
+  }
+
+  .breadcrumb{
+    position:absolute;
+    top:$size-title+px;
+    height:$size-subtitle+px;//1-3-1
+    //width:100%;
+    background-color:$color-header;
+    color:white;
+    padding:0 $size-base*5+px;
+    display:flex;
+    &__element{
+      position:relative;
+      display:inline-block;
+      text-align:center;
+      height:$size-base*5+px;
+      color:white;
+      padding:$size-base+px $size-base*2+px;
+      margin:0 $size-base+px;
+      background-color: $color-header;
+      cursor:pointer;
+      min-width:$size-base*7+px;
+      user-select:none;
+      @extend .fontRL;
+
+      &:not(:first-child){
+        &:before{
+          position:absolute;
+          display:inline-block;
+          top:$size-subtitle/4+2+px;
+          left:-$size-base*2+2+px;
+          @extend .material-icons;
+          color:lighten($color-header-hover,10%);
+          font-size:14px;
+          content:"keyboard_arrow_right";
+
+        }
+      }
+
+      &:last-child{
+        //background-color:$color-header-dark;
+        cursor:default;
+        //text-shadow:0 0 1px black,0 0 5px $color-header-hover;
+        &:after{
+          background-color:white;
+        }
+
+      }
+
+      &:after{
+        position:absolute;
+        display:block;
+        bottom:0;
+        left:0;
+        content:"";
+        width: 100%;
+        height: $size-base/2+px;
+        //background-color:$color-header-hover;
+      }
+
+      &:not(:last-child){
+        &:hover{
+          &:after{
+            background-color:$color-header-hover;
+            //background-color:white;
+          }
+        }
+        i{
+          //z-index: 1;
+        }
+      }
+    }
+  }
+}

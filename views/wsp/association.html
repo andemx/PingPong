@@ -1,0 +1,61 @@
+<div class="wsp wsp-association" app-load="association">
+  <div class="card">
+    <div class="x-50">
+      <h3 class="float-left"><i class="material-icons">location_city</i> Associations </h3>
+    </div>
+    <div class="x-50">
+      <button class="raised colored float-right" asso-table="add" title="Ajouter une association">Ajouter</button>
+    </div>
+    <table>
+      <col width="30">
+      <col width="auto">
+      <col width="auto">
+      <col width="95">
+      <col width="auto">
+      <col width="112">
+      <tbody class="table-header">
+        <tr>
+          <th><input type="checkbox" disabled></th>
+          <th>nom</th>
+          <th>contact</th>
+          <th>tel</th>
+          <th>email</th>
+          <th>action</th>
+        </tr>
+      </tbody>
+      <tbody class="table-content">
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script id="ligneasso" type="text/html">
+  <tr asso-id="" class="ligneasso">
+    <td class="select">
+      <input type="checkbox" disabled>
+    </td>
+    <td class="nom">
+      <span app-display="nom"></span>
+      <input type="text" app-edit="nom" hidden>
+    </td>
+    <td class="contact">
+      <span app-display="contact"></span>
+      <input type="text" app-edit="contact"hidden>
+    </td>
+    <td class="tel">
+      <span app-display="tel"></span>
+      <input type="text" app-edit="tel"hidden>
+    </td>
+    <td class="email">
+      <span app-display="email"></span>
+      <input type="text" app-edit="email"hidden>
+    </td>
+    <td class="action">
+      <button class="raised action success" asso-line="save" hidden><i class="material-icons">save</i></button>
+      <button class="raised action" asso-line="edit"><i class="material-icons">edit</i></button>
+      <button class="raised action danger" asso-line="confirm" hidden><i class="material-icons">delete_sweep</i></button>
+      <button class="raised action" asso-line="delete"><i class="material-icons">delete</i></button>
+      <button class="raised action" asso-line="cancel" hidden><i class="material-icons">cancel</i></button>
+    </td>
+  </tr>
+</script>

@@ -1,0 +1,55 @@
+<div class="wsp wsp-petitlot" app-load="petitlot">
+  <div class="card">
+    <div class="x-50">
+      <h3 class="float-left"><i class="material-icons">free_breakfast</i> Petit lots</h3>
+    </div>
+    <div class="x-50">
+      <button class="raised colored float-right" petitlot-table="add" title="Ajouter un petitlot">Ajouter</button>
+    </div>
+    <table>
+      <col width="30">
+      <col width="auto">
+      <col width="auto">
+      <col width="auto">
+      <col width="112">
+      <tbody class="table-header">
+        <tr>
+          <th><input type="checkbox" disabled></th>
+          <th>nom</th>
+          <th>nombre</th>
+          <th>ordre</th>
+          <th>action</th>
+        </tr>
+      </tbody>
+      <tbody class="table-content">
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script id="lignepetitlot" type="text/html">
+  <tr petitlot-id="" class="lignepetitlot">
+    <td class="select">
+      <input type="checkbox" disabled>
+    </td>
+    <td class="nom">
+      <span app-display="nom"></span>
+      <input type="text" app-edit="nom" hidden>
+    </td>
+    <td class="nombre">
+      <span app-display="nombre"></span>
+      <input type="text" app-edit="nombre"hidden>
+    </td>
+    <td class="ordre">
+      <span app-display="ordre"></span>
+      <input type="text" app-edit="ordre"hidden>
+    </td>
+    <td class="action">
+      <button class="raised action success" petitlot-line="save" hidden><i class="material-icons">save</i></button>
+      <button class="raised action" petitlot-line="edit"><i class="material-icons">edit</i></button>
+      <button class="raised action danger" petitlot-line="confirm" hidden><i class="material-icons">delete_sweep</i></button>
+      <button class="raised action" petitlot-line="delete"><i class="material-icons">delete</i></button>
+      <button class="raised action" petitlot-line="cancel" hidden><i class="material-icons">cancel</i></button>
+    </td>
+  </tr>
+</script>

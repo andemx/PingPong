@@ -1,0 +1,60 @@
+<script type="text/html" id="wspAccueil">
+  <div class="wsp wsp-accueil">
+      <div class="x-50">
+        <button class="card">
+          Gestion
+        </button>
+      </div>
+      <div class="x-50">
+        <button class="card">
+          Tirage
+        </button>
+      </div>
+  </div>
+</script>
+
+<script type="text/html" id="wspGestion">
+  <div class="wsp wsp-gestion">
+      <div class="x-33">
+        <button class="card">
+          Tickets
+        </button>
+      </div>
+      <div class="x-33">
+        <button class="card">
+          Lots
+        </button>
+      </div>
+        <div class="x-33">
+          <button class="card">
+            Associations
+          </button>
+        </div>
+  </div>
+</script>
+
+<script type="text/html" id="wspAssociation">
+  <div class="wsp wsp-association">
+    gestion - associations
+  </div>
+</script>
+
+<script type="text/html" id="wspTicket">
+  <div class="wsp wsp-ticket">
+    gestion - tickets
+  </div>
+</script>
+<script type="text/html" id="wspLot">
+  <div class="wsp wsp-lot">
+      <div class="x-50">
+        <button class="card">
+          gestion - lots
+        </button>
+      </div>
+      <div class="x-50">
+        <button class="card">
+          Tirage
+        </button>
+      </div>
+  </div>
+</script>

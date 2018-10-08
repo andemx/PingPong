@@ -1,0 +1,106 @@
+// main: ../main.scss
+//shadow top,bottom
+.shadow-0{
+  box-shadow:none;
+}
+.shadow-1{
+  box-shadow:0 1px 1.5px rgba(0,0,0,0.12),0 1px 1px rgba(0,0,0,0.24);
+}
+.shadow-2{
+  box-shadow:0 3px 3px rgba(0,0,0,0.16),0 3px 3px rgba(0,0,0,0.23);
+}
+.shadow-3{
+  box-shadow:0 10px 10px rgba(0,0,0,0.19),0 6px 3px rgba(0,0,0,0.23);
+}
+.shadow-4{
+  box-shadow:0 14px 14px rgba(0,0,0,0.25),0 10px 5px rgba(0,0,0,0.22);
+}
+.shadow-5{
+  box-shadow:0 19px 19px rgba(0,0,0,0.30),0 15px 6px rgba(0,0,0,0.22);
+}
+
+.card{
+  width:100%;
+  //height:50%;
+  font-size:14px;
+  margin-bottom:$size-base*2+px;
+  background-color:#efefef;
+  //box-shadow: 0 2px 5px rgba(0,0,0,.26);
+  @extend .shadow-1;
+  padding:$size-base+px;
+  border-radius:3px;
+  &:after{
+      clear: both;
+      content: "";
+      display: block;
+  }
+}
+
+.card-title{
+  padding:$size-base*2+px;
+  font-size:$size-base*3+px;
+  color:$color-text-secondary;
+  @extend .fontR;
+}
+
+.fontRT{
+  font-family: "Roboto-thin";
+}
+.fontRL{
+  font-family: "Roboto-light";
+}
+.fontR{
+  font-family: "Roboto";
+}
+.fontRM{
+  font-family: "Roboto-medium";
+}
+.fontRB{
+  font-family: "Roboto-black";
+}
+.fontRBB{
+  font-family: "Roboto-bold";
+}
+.fontRD{
+    font-family: "Roboto Draft", sans-serif;
+}
+
+.fontNoto{
+  font-family:"NotoSans";
+}
+
+
+[hidden]{
+  display:none!important;
+}
+
+button>i{
+  padding:0 $size-base+px;
+}
+
+button>i,button>span{
+  vertical-align:middle;
+  font-size: 24px;
+  line-height:30px;
+}
+
+.float-right{
+  float:right;
+}
+
+.float-left{
+  float:left;
+}
+
+input,select{
+  width:100%;
+  padding:8px 16px;
+}
+
+table{
+  border: 0;
+  padding:8px;
+}
+.table-gap{
+  opacity:0;
+}

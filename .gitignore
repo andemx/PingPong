@@ -1,0 +1,8 @@
+/local/
+/node_modules/
+/release-builds/
+/vendors/
+/backup/
+/save/backup
+
+npm-debug\.log

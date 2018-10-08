@@ -1,0 +1,50 @@
+// main: ../main.scss
+/*
+@media print {
+body * {
+visibility: hidden;
+}
+.lotWin{
+visibility: visible!important;
+background-color:red;
+color:white;
+}
+
+}
+*/
+
+@media print {
+	.header,.app-bar i{
+		display:none;
+	}
+	body,.body{
+		padding:0!important;
+		overflow:hidden!important;
+	}
+	/*.wsp{
+	display:none;
+}*/
+p{
+	margin:0!important;
+}
+.card{
+	font-size:12px!important;
+	box-shadow:none!important;
+}
+.wsp.wsp-tirage{
+	padding:0!important;
+	padding-top:48px!important;
+	//display:none;
+	span{
+		display:none;
+	}
+	/*#resumeAsso,h3,.lotWin{
+		visibility:visible;
+	}*/
+	button{
+		display:none;
+	}
+}
+
+
+}

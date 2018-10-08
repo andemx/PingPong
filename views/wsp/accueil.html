@@ -1,0 +1,26 @@
+<div class="wsp wsp-accueil" app-load="accueil">
+
+</div>
+<div class="wsp-action">
+	<button hidden class="action big raised floating" app-action="rafraichir" app-data="" title="rafraichir la liste des fichiers">
+		<i class="material-icons">refresh</i>
+	</button>
+	<button class="action big raised floating" app-action="ouvrir" app-data="" title="ouvre le dossier où les données sont stocké">
+		<i class="material-icons">folder_open</i>
+	</button>
+	<button class="primary action big raised floating create" app-action="creer" app-data="" title="Créer une nouvelle souscription" >
+		<i class="material-icons accueil-cancel">cancel</i>
+		<i class="material-icons accueil-create">note_add</i>
+	</button>
+</div>
+<div class="accueil-card">
+	<span class="accueil-input">
+		<input name="name" maxlength="4" title="Merci de saisir l'année que vous souhaitez créer">
+	</span>
+	<button class="action big cancel" app-action="cancel" app-data="" title="annuler la création d'un nouveau tirage" >
+		<i class="material-icons accueil-save">cancel</i>
+	</button>
+	<button class="action big primary save" app-action="save" app-data="" title="Valider le nom du fichier" >
+		<i class="material-icons accueil-save">save</i>
+	</button>
+</div>

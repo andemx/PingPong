@@ -1,0 +1,55 @@
+<div class="wsp wsp-groslot" app-load="groslot">
+  <div class="card">
+    <div class="x-50">
+      <h3 class="float-left"><i class="material-icons">speaker</i> Gros lots</h3>
+    </div>
+    <div class="x-50">
+      <button class="raised colored float-right" groslot-table="add" title="Ajouter un groslot">Ajouter</button>
+    </div>
+    <table>
+      <col width="30">
+      <col width="auto">
+      <col width="auto">
+      <col width="auto">
+      <col width="112">
+      <tbody class="table-header">
+        <tr>
+          <th><input type="checkbox" disabled></th>
+          <th>nom</th>
+          <th>nombre</th>
+          <th>ordre</th>
+          <th>action</th>
+        </tr>
+      </tbody>
+      <tbody class="table-content">
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script id="lignegroslot" type="text/html">
+  <tr groslot-id="" class="lignegroslot">
+    <td class="select">
+      <input type="checkbox" disabled>
+    </td>
+    <td class="nom">
+      <span app-display="nom"></span>
+      <input type="text" app-edit="nom" hidden>
+    </td>
+    <td class="nombre">
+      <span app-display="nombre"></span>
+      <input type="text" app-edit="nombre"hidden>
+    </td>
+    <td class="ordre">
+      <span app-display="ordre"></span>
+      <input type="text" app-edit="ordre"hidden>
+    </td>
+    <td class="action">
+      <button class="raised action success" groslot-line="save" hidden><i class="material-icons">save</i></button>
+      <button class="raised action" groslot-line="edit"><i class="material-icons">edit</i></button>
+      <button class="raised action danger" groslot-line="confirm" hidden><i class="material-icons">delete_sweep</i></button>
+      <button class="raised action" groslot-line="delete"><i class="material-icons">delete</i></button>
+      <button class="raised action" groslot-line="cancel" hidden><i class="material-icons">cancel</i></button>
+    </td>
+  </tr>
+</script>

@@ -1,0 +1,1 @@
+start "" "C:\dev\UD44\UD44-souscription\release-builds\UD44 Souscription-win32-ia32\UD44 Souscription.exe"
