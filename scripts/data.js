@@ -22,6 +22,7 @@ function getAppPath(){
 function getActualFile(){
 	return dataPath+APP.year+".json";
 	//return dataPath+"data.json";
+
 }
 //console.log(">>>",app,process.resourcesPath.split("UD44-souscription")[0]+"UD44-souscription\data");
 

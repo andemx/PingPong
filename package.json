@@ -11,9 +11,15 @@
   ],
   "author": "andemx",
   "license": "MIT",
-  "dependencies":{
+  "dependencies": {
+    "chokidar": "^2.0.3",
+    "domain-ping": "^0.1.10",
     "electron-is-dev": "^0.3.0",
-    "chokidar": "^2.0.3"
+    "node-http-ping": "^0.3.1",
+    "ping": "^0.2.2",
+    "ping-wrapper": "0.0.3",
+    "tcp-ping": "^0.1.1",
+    "traceroute": "^1.0.0"
   },
   "devDependencies": {
     "electron": "^2.0.2",
